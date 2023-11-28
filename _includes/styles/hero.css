@@ -1,0 +1,27 @@
+.hero {
+    width: 100%;
+
+    background-image: url("/assets/hero-background.jpg");
+    background-position: 50% 50%;
+    background-size: cover;
+
+    display: grid;
+    place-items: center;
+}
+
+.hero-text {
+    margin: 1rem;
+    padding: 0.5rem 1rem;
+
+    font-size: 5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow: 0 0 4px black;
+
+    box-shadow: 0 0 12px white;
+    background-color: #f8f8f8;
+
+    mix-blend-mode: screen;
+
+    border-radius: 0.5rem;
+}

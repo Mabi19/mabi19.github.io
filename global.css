@@ -1,0 +1,10 @@
+@import "styles/hero.css";
+
+body {
+    font-family: "Noto Sans", sans-serif;
+    margin: 0;
+}
+
+main {
+    margin: 0.5rem;
+}
