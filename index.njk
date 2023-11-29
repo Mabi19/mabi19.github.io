@@ -1,0 +1,71 @@
+---
+layout: "base.njk"
+link_definitions:
+    github:
+        text: Source code on GitHub
+head_extra: |
+    <link rel="stylesheet" href="/styles/home.css">
+---
+
+{% macro project_panel(project) %}
+    <div class="panel">
+        <a href="{{ project.url }}" class="name"><h3>{{ project.name }}</h3></a>
+        {% if project.description %}
+            <div class="description">{{ project.description | safe }}</div>
+        {% endif %}
+        <div class="links">
+            {% for name, url in project.links %}
+                {% set link_data = link_definitions[name] %}
+                <a href="{{url}}">{{ link_data.text }}</a>
+            {% endfor %}
+        </div>
+    </div>
+{% endmacro %}
+
+<h1>Hey, I'm Mabi 👋</h2>
+
+<p>
+    ...and here are some of the things I've made.
+</p>
+
+<hr>
+
+<section>
+    <div class="panel-box">
+        {% for project in projects.pinned %}
+            {{ project_panel(project) }}
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2>SkyBlock</h2>
+    <div class="panel-box">
+        {% for project in projects.skyblock %}
+            {{ project_panel(project) }}
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2>YouTube</h2>
+    <p>
+        I occasionally post videos on my
+        <a href="https://www.youtube.com/channel/UC3mz-dWeNDZIHR6jzaMiRgA">YouTube channel</a>.
+        Here are some of the ones I like:
+    </p>
+    <div class="panel-box">
+        {% for project in projects.youtube %}
+            {{ project_panel(project) }}
+        {% endfor %}
+    </div>
+</section>
+
+<section>
+    <h2>Miscellaneous</h2>
+    <div class="panel-box">
+        {% for project in projects.misc %}
+            {{ project_panel(project) }}
+        {% endfor %}
+    </div>
+</section>

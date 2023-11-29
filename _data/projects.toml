@@ -1,0 +1,37 @@
+[[pinned]]
+name = "How Computers Use Numbers"
+description = 'My <a href="https://some.3b1b.co">SoME3</a> submission: an interactive article about various number formats'
+url = "/numbers/"
+links = { github = "https://github.com/Mabi19/numbers/" }
+
+[[pinned]]
+name = "Stardew Perfection Randomizer"
+description = "A Stardew Valley challenge about achieving Perfection one step at a time"
+
+[[skyblock]]
+name = "Luckalyzer"
+description = "A luck calculator for Hypixel SkyBlock"
+url = "/luckalyzer/"
+links = { github = "https://github.com/Mabi19/luckalyzer/" }
+
+[[skyblock]]
+name = "Spider's Den Forecast"
+description = "A weather forecast for the Spider's Den island in Hypixel SkyBlock"
+url = "/sb-forecast/"
+links = { github = "https://github.com/Mabi19/sb-forecast/" }
+
+[[youtube]]
+name = "Password Game TAS"
+url = "https://www.youtube.com/watch?v=UF0xKMagtpE"
+links = { github = "https://github.com/Mabi19/password-game-tas/" }
+
+[[misc]]
+name = "Colourblind Simulator"
+description = "A web app I made for a biology project. Polish-only"
+url = "/colourblind-simulator/"
+links = { github = "https://github.com/Mabi19/colourblind-simulator/" }
+
+[[misc]]
+name = "boostedminecarts"
+description = "PaperMC plugin that buffs minecart speeds"
+links = { github = "https://github.com/Mabi19/boostedminecarts/" }
