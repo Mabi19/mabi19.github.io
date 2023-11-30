@@ -1,6 +1,7 @@
 .panel-box {
     display: flex;
     flex-flow: row wrap;
+    justify-content: center;
     gap: 1rem;
 }
 
@@ -10,8 +11,6 @@
     padding: 0.5rem;
 
     --border-width: 4px;
-    --border-col-1: #e174c5;
-    --border-col-2: #8643b5;
     /* gradient border stuff */
     border: var(--border-width) solid transparent;
     border-radius: 0.5rem;
@@ -29,8 +28,8 @@
 
         background: linear-gradient(
             135deg,
-            var(--border-col-1),
-            var(--border-col-2)
+            var(--border-col-1, #e174c5),
+            var(--border-col-2, #8643b5)
         );
         border-radius: inherit;
         z-index: -1;
@@ -39,7 +38,6 @@
     .name {
         color: inherit;
 
-        transition: color 0.3s ease;
         &:hover {
             color: #097b30;
         }
