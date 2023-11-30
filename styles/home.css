@@ -17,6 +17,9 @@
     background-color: #fdfdfd;
     background-clip: padding-box;
 
+    display: flex;
+    flex-flow: row nowrap;
+
     position: relative;
     &::before {
         content: "";
@@ -45,5 +48,20 @@
 
     h3 {
         margin: 0;
+    }
+
+    .content {
+        flex-grow: 1;
+    }
+
+    .badges {
+        display: grid;
+        grid-template-columns: auto auto;
+
+        img {
+            width: 1.5rem;
+            height: 1.5rem;
+            object-fit: contain;
+        }
     }
 }

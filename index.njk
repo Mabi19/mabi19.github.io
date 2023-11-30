@@ -9,21 +9,29 @@ head_extra: |
 
 {% macro project_panel(project) %}
     <div class="panel">
-        {% if project.url %}
-            <a href="{{ project.url }}" class="name">
-        {% endif %}
-                <h3>{{ project.name }}</h3>
-        {% if project.url %}
-            </a>
-        {% endif %}
+        <div class="content">
+            {% if project.url %}
+                <a href="{{ project.url }}" class="name">
+            {% endif %}
+                    <h3>{{ project.name }}</h3>
+            {% if project.url %}
+                </a>
+            {% endif %}
 
-        {% if project.description %}
-            <div class="description">{{ project.description | safe }}</div>
-        {% endif %}
-        <div class="links">
-            {% for name, url in project.links %}
-                {% set link_data = link_definitions[name] %}
-                <a href="{{url}}">{{ link_data.text }}</a>
+            {% if project.description %}
+                <div class="description">{{ project.description | safe }}</div>
+            {% endif %}
+            <div class="links">
+                {% for name, url in project.links %}
+                    {% set link_data = link_definitions[name] %}
+                    <a href="{{url}}">{{ link_data.text }}</a>
+                {% endfor %}
+            </div>
+        </div>
+        <div class="badges">
+            {% for technology in project.technologies %}
+                {% set name = technologies[technology] or technology %}
+                <img src="/assets/technologies/{{technology}}.svg" alt="{{name}}" title="{{name}}">
             {% endfor %}
         </div>
     </div>
