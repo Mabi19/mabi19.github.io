@@ -9,7 +9,14 @@ head_extra: |
 
 {% macro project_panel(project) %}
     <div class="panel">
-        <a href="{{ project.url }}" class="name"><h3>{{ project.name }}</h3></a>
+        {% if project.url %}
+            <a href="{{ project.url }}" class="name">
+        {% endif %}
+                <h3>{{ project.name }}</h3>
+        {% if project.url %}
+            </a>
+        {% endif %}
+
         {% if project.description %}
             <div class="description">{{ project.description | safe }}</div>
         {% endif %}

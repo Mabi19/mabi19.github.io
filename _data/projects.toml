@@ -7,8 +7,9 @@ links = { github = "https://github.com/Mabi19/numbers/" }
 
 [[pinned]]
 name = "Stardew Perfection Randomizer"
-technologies = ["vue", "nuxt"]
 description = "A Stardew Valley challenge about achieving Perfection one step at a time"
+url = "/stardew-perfection-randomizer/"
+technologies = ["vue", "nuxt"]
 
 [[pinned]]
 name = "This website"
