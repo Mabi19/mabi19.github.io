@@ -6,6 +6,10 @@
     box-sizing: border-box;
 }
 
+:root {
+    --accent-color: #9370d8;
+}
+
 body {
     font-family: "Noto Sans", sans-serif;
     margin: 0;
@@ -16,4 +20,9 @@ main {
     margin: auto;
     width: 100vw;
     max-width: 80rem;
+}
+
+hr {
+    border: none;
+    border-bottom: 4px dashed var(--accent-color);
 }
