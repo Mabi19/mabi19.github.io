@@ -12,6 +12,7 @@
 
 body {
     font-family: "Noto Sans", sans-serif;
+    line-height: 1.5;
     margin: 0;
 }
 
@@ -25,4 +26,14 @@ main {
 hr {
     border: none;
     border-bottom: 4px dashed var(--accent-color);
+}
+
+h2,
+h3,
+h4 {
+    margin: 0.5em 0 0.25em 0;
+}
+
+p {
+    margin: 0.5em 0;
 }
