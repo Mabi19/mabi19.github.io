@@ -54,7 +54,7 @@ head_extra: |
         <a href="https://www.youtube.com/channel/UC3mz-dWeNDZIHR6jzaMiRgA">YouTube channel</a>.
         Here are some of the ones I like:
     </p>
-    <div class="panel-box">
+    <div class="panel-box" style="--border-col-1: red; --border-col-2: darkred">
         {% for project in projects.youtube %}
             {{ project_panel(project) }}
         {% endfor %}
