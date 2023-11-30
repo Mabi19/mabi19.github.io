@@ -2,27 +2,32 @@
 name = "How Computers Use Numbers"
 description = 'My <a href="https://some.3b1b.co">SoME3</a> submission: an interactive article about various number formats'
 url = "/numbers/"
+technologies = ["lit"]
 links = { github = "https://github.com/Mabi19/numbers/" }
 
 [[pinned]]
 name = "Stardew Perfection Randomizer"
+technologies = ["vue", "nuxt"]
 description = "A Stardew Valley challenge about achieving Perfection one step at a time"
 
 [[pinned]]
 name = "This website"
 description = "First time using a static site generator. Still a work in progress 🚧"
+technologies = ["lume"]
 links = { github = "https://github.com/Mabi19/mabi19.github.io/" }
 
 [[skyblock]]
 name = "Luckalyzer"
 description = "A luck calculator for Hypixel SkyBlock"
 url = "/luckalyzer/"
+technologies = ["vue"]
 links = { github = "https://github.com/Mabi19/luckalyzer/" }
 
 [[skyblock]]
 name = "Spider's Den Forecast"
 description = "A weather forecast for the Spider's Den island in Hypixel SkyBlock"
 url = "/sb-forecast/"
+technologies = ["vanilla-ts"]
 links = { github = "https://github.com/Mabi19/sb-forecast/" }
 
 [[youtube]]
@@ -34,9 +39,11 @@ links = { github = "https://github.com/Mabi19/password-game-tas/" }
 name = "Colourblind Simulator"
 description = "A web app I made for a biology project. Polish-only"
 url = "/colourblind-simulator/"
+technologies = ["vue"]
 links = { github = "https://github.com/Mabi19/colourblind-simulator/" }
 
 [[misc]]
 name = "boostedminecarts"
 description = "PaperMC plugin that buffs minecart speeds"
+technologies = ["java"]
 links = { github = "https://github.com/Mabi19/boostedminecarts/" }
