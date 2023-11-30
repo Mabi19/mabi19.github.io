@@ -7,6 +7,7 @@ import sourceMaps from "lume/plugins/source_maps.ts";
 
 // this is set in deno.json
 const environment = Deno.env.get("DENO_ENV") == "production" ? "production" : "development";
+console.log(`environment: ${environment}`);
 
 const site = lume({
     location: new URL("https://mabi.tmpinc.io"),
