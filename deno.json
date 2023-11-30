@@ -1,7 +1,7 @@
 {
   "tasks": {
     "lume": "echo \"import 'lume/cli.ts'\" | deno run --unstable -A -",
-    "build": "deno task lume",
+    "build": "DENO_ENV=production deno task lume",
     "serve": "deno task lume -s"
   },
   "imports": {

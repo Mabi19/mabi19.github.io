@@ -4,6 +4,9 @@ import postcss from "lume/plugins/postcss.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import lightningCSS from "lume/plugins/lightningcss.ts";
 
+// this is set in deno.json
+const environment = Deno.env.get("DENO_ENV") == "production" ? "production" : "development";
+
 const site = lume({
     location: new URL("https://mabi.tmpinc.io"),
 });
@@ -11,8 +14,11 @@ const site = lume({
 site.use(toml());
 
 site.use(postcss());
-site.use(minifyHTML());
-site.use(lightningCSS());
+
+if (environment == "production") {
+    site.use(minifyHTML());
+    site.use(lightningCSS());
+}
 
 site.copy("assets");
 
