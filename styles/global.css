@@ -1,5 +1,11 @@
 @import "styles/hero.css";
 
+*,
+*::after,
+*::before {
+    box-sizing: border-box;
+}
+
 body {
     font-family: "Noto Sans", sans-serif;
     margin: 0;
