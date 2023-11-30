@@ -10,7 +10,7 @@ description = "A Stardew Valley challenge about achieving Perfection one step at
 
 [[pinned]]
 name = "This website"
-description = "First time using a static site generator"
+description = "First time using a static site generator. Still a work in progress 🚧"
 links = { github = "https://github.com/Mabi19/mabi19.github.io/" }
 
 [[skyblock]]
