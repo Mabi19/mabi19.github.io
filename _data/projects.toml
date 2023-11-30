@@ -8,6 +8,11 @@ links = { github = "https://github.com/Mabi19/numbers/" }
 name = "Stardew Perfection Randomizer"
 description = "A Stardew Valley challenge about achieving Perfection one step at a time"
 
+[[pinned]]
+name = "This website"
+description = "First time using a static site generator"
+links = { github = "https://github.com/Mabi19/mabi19.github.io/" }
+
 [[skyblock]]
 name = "Luckalyzer"
 description = "A luck calculator for Hypixel SkyBlock"
