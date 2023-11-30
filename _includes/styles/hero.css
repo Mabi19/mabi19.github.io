@@ -16,11 +16,11 @@
     font-size: 5rem;
     font-weight: bold;
     text-transform: uppercase;
-    text-shadow: 0 0 4px black;
+    text-align: center;
 
+    text-shadow: 0 0 4px black;
     box-shadow: 0 0 12px white;
     background-color: #f8f8f8;
-
     mix-blend-mode: screen;
 
     border-radius: 0.5rem;
