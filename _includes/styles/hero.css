@@ -25,3 +25,9 @@
 
     border-radius: 0.5rem;
 }
+
+@media (max-width: 750px) {
+    .hero-text {
+        font-size: 4rem;
+    }
+}
