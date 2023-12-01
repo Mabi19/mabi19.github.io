@@ -1,6 +1,7 @@
 .hero {
     width: 100%;
 
+    background-color: black;
     background-image: url("/assets/hero-background.webp");
     background-position: 50% 50%;
     background-size: cover;
