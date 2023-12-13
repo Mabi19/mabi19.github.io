@@ -1,0 +1,22 @@
+.gradient-border {
+    position: relative;
+    background-clip: padding-box;
+    border: var(--border-width) solid transparent;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: calc(-1 * var(--border-width));
+        left: calc(-1 * var(--border-width));
+        right: calc(-1 * var(--border-width));
+        bottom: calc(-1 * var(--border-width));
+
+        background: linear-gradient(
+            135deg,
+            var(--border-col-1, #e174c5),
+            var(--border-col-2, #8643b5)
+        );
+        border-radius: inherit;
+        z-index: -1;
+    }
+}
