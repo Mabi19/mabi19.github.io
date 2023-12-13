@@ -1,5 +1,5 @@
 ---
-layout: "base.njk"
+layout: base.vto
 link_definitions:
     github:
         text: Source code on GitHub
@@ -7,35 +7,35 @@ head_extra: |
     <link rel="stylesheet" href="/styles/home.css">
 ---
 
-{% macro project_panel(project) %}
+{{ function project_panel(project) }}
     <div class="panel">
         <div class="content">
-            {% if project.url %}
+            {{ if project.url }}
                 <a href="{{ project.url }}" class="name">
-            {% endif %}
+            {{ /if }}
                     <h3>{{ project.name }}</h3>
-            {% if project.url %}
+            {{ if project.url }}
                 </a>
-            {% endif %}
+            {{ /if }}
 
-            {% if project.description %}
-                <div class="description">{{ project.description | safe }}</div>
-            {% endif %}
+            {{ if project.description }}
+                <div class="description">{{ project.description }}</div>
+            {{ /if }}
             <div class="links">
-                {% for name, url in project.links %}
-                    {% set link_data = link_definitions[name] %}
+                {{ for name, url of project.links }}
+                    {{> const link_data = link_definitions[name] }}
                     <a href="{{url}}">{{ link_data.text }}</a>
-                {% endfor %}
+                {{ /for }}
             </div>
         </div>
         <div class="badges">
-            {% for technology in project.technologies %}
-                {% set name = technologies[technology] or technology %}
-                <img src="/assets/technologies/{{technology}}.svg" alt="{{name}}" title="{{name}}">
-            {% endfor %}
+            {{ for technology of project.technologies }}
+                {{> const name = technologies[technology] ?? technology }}
+                <img src="/assets/technologies/{{technology}}.svg" alt="{{name}}" title="{{name}}" />
+            {{ /for }}
         </div>
     </div>
-{% endmacro %}
+{{ /function }}
 
 <h1>Hey, I'm Mabi 👋</h1>
 
@@ -43,13 +43,13 @@ head_extra: |
     ...and here are some of the things I've made.
 </p>
 
-<hr>
+<hr />
 
 <section>
     <div class="panel-box">
-        {% for project in projects.pinned %}
+        {{ for project of projects.pinned }}
             {{ project_panel(project) }}
-        {% endfor %}
+        {{ /for }}
     </div>
 </section>
 
@@ -60,9 +60,9 @@ head_extra: |
         <a href="https://sky.shiiyu.moe/stats/Mabi19/Coconut">My SkyBlock profile</a>
     </p>
     <div class="panel-box" style="--border-col-1: darkseagreen; --border-col-2: darkolivegreen">
-        {% for project in projects.skyblock %}
+        {{ for project of projects.skyblock }}
             {{ project_panel(project) }}
-        {% endfor %}
+        {{ /for }}
     </div>
 </section>
 
@@ -74,17 +74,17 @@ head_extra: |
         Here are some of the ones I like:
     </p>
     <div class="panel-box" style="--border-col-1: red; --border-col-2: darkred">
-        {% for project in projects.youtube %}
+        {{ for project of projects.youtube }}
             {{ project_panel(project) }}
-        {% endfor %}
+        {{ /for }}
     </div>
 </section>
 
 <section>
     <h2>Miscellaneous</h2>
     <div class="panel-box">
-        {% for project in projects.misc %}
+        {{ for project of projects.misc }}
             {{ project_panel(project) }}
-        {% endfor %}
+        {{ /for }}
     </div>
 </section>

@@ -3,11 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>
-            {% if title %}
-                {{ title }} - Mabi's Corner
-            {% else %}
+            {{ if it.title }}
+                {{- title }} - Mabi's Corner
+            {{ else }}
                 Mabi's Corner
-            {% endif %}
+            {{ /if }}
         </title>
         <meta name="viewport" content="width=device-width,initial-scale=1"
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -15,7 +15,7 @@
         <link rel="stylesheet" href="/styles/global.css">
         <link rel="icon" href="/assets/icon.png">
         <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
-        {{ head_extra | safe }}
+        {{ head_extra }}
     </head>
     <body>
         <header>
@@ -24,7 +24,7 @@
             </div>
         </header>
         <main>
-            {{ content | safe }}
+            {{ content }}
         </main>
     </body>
 </html>
