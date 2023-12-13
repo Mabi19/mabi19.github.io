@@ -3,7 +3,7 @@ name = "How Computers Use Numbers"
 description = 'My <a href="https://some.3b1b.co">SoME3</a> submission: an interactive article about various number formats'
 url = "/numbers/"
 technologies = ["lit"]
-icon = "/numbers/icon.png"
+icon = "/numbers/assets/icon.png"
 links = { github = "https://github.com/Mabi19/numbers/" }
 
 [[pinned]]
