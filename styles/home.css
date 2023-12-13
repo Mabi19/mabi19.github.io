@@ -48,6 +48,17 @@
 
     h3 {
         margin: 0;
+
+        display: flex;
+        flex-flow: row nowrap;
+        gap: 0.25em;
+        align-items: center;
+    }
+
+    .icon {
+        width: 1em;
+        height: 1em;
+        object-fit: cover;
     }
 
     .content {

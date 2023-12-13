@@ -3,17 +3,21 @@ name = "How Computers Use Numbers"
 description = 'My <a href="https://some.3b1b.co">SoME3</a> submission: an interactive article about various number formats'
 url = "/numbers/"
 technologies = ["lit"]
+icon = "/numbers/icon.png"
 links = { github = "https://github.com/Mabi19/numbers/" }
 
 [[pinned]]
 name = "Stardew Perfection Randomizer"
 description = "A Stardew Valley challenge about achieving Perfection one step at a time"
 url = "/stardew-perfection-randomizer/"
+icon = "/stardew-perfection-randomizer/icon.png"
 technologies = ["vue", "nuxt"]
+links = { github = "https://github.com/Mabi19/stardew-perfection-randomizer/" }
 
 [[pinned]]
 name = "This website"
 description = "First time using a static site generator. Still a work in progress 🚧"
+icon = "/assets/icon.png"
 technologies = ["lume"]
 links = { github = "https://github.com/Mabi19/mabi19.github.io/" }
 
@@ -21,6 +25,7 @@ links = { github = "https://github.com/Mabi19/mabi19.github.io/" }
 name = "Luckalyzer"
 description = "A luck calculator for Hypixel SkyBlock"
 url = "/luckalyzer/"
+icon = "/luckalyzer/icon-8x.png"
 technologies = ["vue"]
 links = { github = "https://github.com/Mabi19/luckalyzer/" }
 
@@ -28,6 +33,7 @@ links = { github = "https://github.com/Mabi19/luckalyzer/" }
 name = "Spider's Den Forecast"
 description = "A weather forecast for the Spider's Den island in Hypixel SkyBlock"
 url = "/sb-forecast/"
+icon = "/sb-forecast/favicon-default.png"
 technologies = ["vanilla-ts"]
 links = { github = "https://github.com/Mabi19/sb-forecast/" }
 

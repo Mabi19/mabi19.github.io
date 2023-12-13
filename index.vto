@@ -13,7 +13,14 @@ head_extra: |
             {{ if project.url }}
                 <a href="{{ project.url }}" class="name">
             {{ /if }}
-                    <h3>{{ project.name }}</h3>
+                    <h3>
+                        {{ if project.icon }}
+                            <img src="{{ project.icon }}" role="presentation" class="icon">
+                        {{ /if }}
+                        <span>
+                            {{ project.name }}
+                        </span>
+                    </h3>
             {{ if project.url }}
                 </a>
             {{ /if }}
@@ -31,7 +38,7 @@ head_extra: |
         <div class="badges">
             {{ for technology of project.technologies }}
                 {{> const name = technologies[technology] ?? technology }}
-                <img src="/assets/technologies/{{technology}}.svg" alt="{{name}}" title="{{name}}" />
+                <img src="/assets/technologies/{{technology}}.svg" alt="{{name}}" title="{{name}}">
             {{ /for }}
         </div>
     </div>
@@ -43,7 +50,7 @@ head_extra: |
     ...and here are some of the things I've made.
 </p>
 
-<hr />
+<hr>
 
 <section>
     <div class="panel-box">
