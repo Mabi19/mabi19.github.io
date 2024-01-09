@@ -12,7 +12,7 @@ console.log(`environment: ${environment}`);
 
 const site = lume(
     {
-        location: new URL("https://mabi.tmpinc.io"),
+        location: new URL("https://mabi.land"),
     },
     {}
 );
