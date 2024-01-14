@@ -26,7 +26,7 @@ name = "Luckalyzer"
 description = "A luck calculator for Hypixel SkyBlock"
 url = "/luckalyzer/"
 icon = "/luckalyzer/icon-8x.png"
-technologies = ["vue"]
+technologies = ["vue", "wasm", "rust"]
 links = { github = "https://github.com/Mabi19/luckalyzer/" }
 
 [[skyblock]]
