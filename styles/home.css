@@ -58,3 +58,18 @@
         }
     }
 }
+
+.clock {
+    float: right;
+}
+
+@media (max-width: 650px) {
+    .intro-container {
+        display: flex;
+        flex-flow: column-reverse nowrap;
+    }
+
+    .clock {
+        float: none;
+    }
+}

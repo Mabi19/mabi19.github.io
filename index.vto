@@ -5,57 +5,60 @@ link_definitions:
         text: Source code on GitHub
 head_extra: |
     <link rel="stylesheet" href="/styles/home.css">
+    <script src="/scripts/clock.js" type="module"></script>
+    <link rel="stylesheet" href="/styles/clock.css">
 ---
 
 {{ function project_panel(project) }}
-    <div class="panel gradient-border">
-        <div class="content">
-            {{ if project.url }}
-                <a href="{{ project.url }}" class="name">
+<div class="panel gradient-border">
+    <div class="content">
+        {{ if project.url }}
+        <a href="{{ project.url }}" class="name">
             {{ /if }}
-                    <h3>
-                        {{ if project.icon }}
-                            <img src="{{ project.icon }}" role="presentation" class="icon">
-                        {{ /if }}
-                        <span>
-                            {{ project.name }}
-                        </span>
-                    </h3>
+            <h3>
+                {{ if project.icon }}
+                <img src="{{ project.icon }}" role="presentation" class="icon" />
+                {{ /if }}
+                <span>
+                    {{ project.name }}
+                </span>
+            </h3>
             {{ if project.url }}
-                </a>
-            {{ /if }}
+        </a>
+        {{ /if }}
 
-            {{ if project.description }}
-                <div class="description">{{ project.description }}</div>
-            {{ /if }}
-            <div class="links">
-                {{ for name, url of project.links }}
-                    {{> const link_data = link_definitions[name] }}
-                    <a href="{{url}}">{{ link_data.text }}</a>
-                {{ /for }}
-            </div>
-        </div>
-        <div class="badges">
-            {{ for technology of project.technologies }}
-                {{> const name = technologies[technology] ?? technology }}
-                <img src="/assets/technologies/{{technology}}.svg" alt="{{name}}" title="{{name}}">
+        {{ if project.description }}
+        <div class="description">{{ project.description }}</div>
+        {{ /if }}
+        <div class="links">
+            {{ for name, url of project.links }}
+            {{> const link_data = link_definitions[name] }}
+            <a href="{{ url }}">{{ link_data.text }}</a>
             {{ /for }}
         </div>
     </div>
+    <div class="badges">
+        {{ for technology of project.technologies }}
+        {{> const name = technologies[technology] ?? technology }}
+        <img src="/assets/technologies/{{ technology }}.svg" alt="{{ name }}" title="{{ name }}" />
+        {{ /for }}
+    </div>
+</div>
 {{ /function }}
 
 <h1>Hey, I'm Mabi 👋</h1>
 
-<p>
-    ...and here are some of the things I've made.
-</p>
+<div class="intro-container">
+    <my-tz-clock></my-tz-clock>
+    <section class="intro">{{ include "intro.md" |> md }}</section>
+</div>
 
-<hr>
+<hr />
 
 <section>
     <div class="panel-box">
         {{ for project of projects.pinned }}
-            {{ project_panel(project) }}
+        {{ project_panel(project) }}
         {{ /for }}
     </div>
 </section>
@@ -63,12 +66,13 @@ head_extra: |
 <section>
     <h2>Hypixel SkyBlock</h2>
     <p>
-        I don't play SkyBlock very much at the moment, but I did make some tools for it (though I don't keep them updated anymore).
+        I don't play SkyBlock very much at the moment, but I did make some tools for it (though I
+        don't keep them updated anymore).
         <a href="https://sky.shiiyu.moe/stats/Mabi19/Coconut">My SkyBlock profile</a>
     </p>
     <div class="panel-box" style="--border-col-1: darkseagreen; --border-col-2: darkolivegreen">
         {{ for project of projects.skyblock }}
-            {{ project_panel(project) }}
+        {{ project_panel(project) }}
         {{ /for }}
     </div>
 </section>
@@ -77,12 +81,12 @@ head_extra: |
     <h2>YouTube</h2>
     <p>
         I occasionally post videos on my
-        <a href="https://www.youtube.com/channel/UC3mz-dWeNDZIHR6jzaMiRgA">YouTube channel</a>.
-        Here are some of the ones I like:
+        <a href="https://www.youtube.com/channel/UC3mz-dWeNDZIHR6jzaMiRgA">YouTube channel</a>. Here
+        are some of the ones I like:
     </p>
     <div class="panel-box" style="--border-col-1: red; --border-col-2: darkred">
         {{ for project of projects.youtube }}
-            {{ project_panel(project) }}
+        {{ project_panel(project) }}
         {{ /for }}
     </div>
 </section>
@@ -91,7 +95,7 @@ head_extra: |
     <h2>Miscellaneous</h2>
     <div class="panel-box">
         {{ for project of projects.misc }}
-            {{ project_panel(project) }}
+        {{ project_panel(project) }}
         {{ /for }}
     </div>
 </section>

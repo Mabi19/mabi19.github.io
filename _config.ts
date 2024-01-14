@@ -5,6 +5,7 @@ import postcss from "lume/plugins/postcss.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import lightningCSS from "lume/plugins/lightningcss.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
+import esbuild from "lume/plugins/esbuild.ts";
 
 // this is set in deno.json
 const environment = Deno.env.get("DENO_ENV") == "production" ? "production" : "development";
@@ -18,10 +19,9 @@ const site = lume(
 );
 
 site.use(eta());
-
 site.use(toml());
-
 site.use(postcss());
+site.use(esbuild());
 
 if (environment == "production") {
     site.use(minifyHTML());
