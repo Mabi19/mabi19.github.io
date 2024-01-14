@@ -44,15 +44,24 @@
     }
 
     .content {
-        flex-grow: 1;
+        width: 100%;
+        flex-shrink: 1;
     }
 
     .badges {
         display: flex;
-        flex-flow: row-reverse wrap;
-        width: calc(3rem + 2px);
+        flex-flow: row wrap;
+
         gap: 2px;
+        justify-content: flex-end;
         align-content: flex-start;
+
+        min-width: calc(3rem + 2px);
+
+        /* If there is only 1 child, use only 1 column */
+        &:has(:only-child) {
+            min-width: 1.5rem;
+        }
 
         img {
             width: 1.5rem;
