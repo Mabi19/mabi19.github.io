@@ -54,10 +54,14 @@ export class MyTimezoneClock extends HTMLElement {
     update() {
         const date = new Date();
         this.timeElem.textContent = this.mainFormatter.format(date);
-        this.subElem.textContent = `${getTimezoneName(
-            this.shortTzFormatter,
+        const newTzText = `${getTimezoneName(this.shortTzFormatter, date)} (${getTimezoneName(
+            this.offsetTzFormatter,
             date
-        )} (${getTimezoneName(this.offsetTzFormatter, date)})`;
+        )})`;
+        // do not update when it is the same to avoid deselecting
+        if (this.subElem.textContent != newTzText) {
+            this.subElem.textContent = newTzText;
+        }
     }
 }
 
