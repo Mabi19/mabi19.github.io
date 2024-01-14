@@ -48,9 +48,11 @@
     }
 
     .badges {
-        display: grid;
-        grid-template-columns: repeat(2, auto);
-        grid-auto-rows: min-content;
+        display: flex;
+        flex-flow: row-reverse wrap;
+        width: calc(3rem + 2px);
+        gap: 2px;
+        align-content: flex-start;
 
         img {
             width: 1.5rem;
