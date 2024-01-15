@@ -9,6 +9,8 @@
 
     --border-col-1: rgb(94, 191, 223);
     --border-col-2: rgb(14, 99, 255);
+
+    margin: auto;
 }
 
 .clock-title {
