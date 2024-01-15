@@ -12,6 +12,8 @@ export class MyTimezoneClock extends HTMLElement {
     shortTzFormatter: Intl.DateTimeFormat;
     offsetTzFormatter: Intl.DateTimeFormat;
 
+    lastUpdate: Date;
+
     constructor() {
         super();
 
@@ -41,25 +43,34 @@ export class MyTimezoneClock extends HTMLElement {
             timeZoneName: "shortOffset",
             timeZone: "Europe/Warsaw",
         });
+
+        this.lastUpdate = new Date();
     }
 
     connectedCallback() {
         this.append(this.titleElem, this.contentElem);
         this.classList.add("clock", "gradient-border");
 
-        this.update();
+        this.update(new Date());
 
-        setInterval(() => {
-            this.update();
-        }, 1000);
+        this.updateLoop();
     }
 
-    update() {
-        const date = new Date();
-        this.timeElem.textContent = this.mainFormatter.format(date);
-        const newTzText = `${getTimezoneName(this.shortTzFormatter, date)} (${getTimezoneName(
+    updateLoop() {
+        const now = new Date();
+        if (now.getUTCSeconds() != this.lastUpdate.getUTCSeconds()) {
+            this.update(now);
+        }
+        this.lastUpdate = now;
+
+        requestAnimationFrame(() => this.updateLoop());
+    }
+
+    update(now: Date) {
+        this.timeElem.textContent = this.mainFormatter.format(now);
+        const newTzText = `${getTimezoneName(this.shortTzFormatter, now)} (${getTimezoneName(
             this.offsetTzFormatter,
-            date
+            now
         )})`;
         // do not update when it is the same to avoid deselecting
         if (this.subElem.textContent != newTzText) {
