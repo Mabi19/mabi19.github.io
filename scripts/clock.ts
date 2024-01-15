@@ -31,12 +31,15 @@ export class MyTimezoneClock extends HTMLElement {
 
         this.mainFormatter = new Intl.DateTimeFormat(undefined, {
             timeStyle: "medium",
+            timeZone: "Europe/Warsaw",
         });
         this.shortTzFormatter = new Intl.DateTimeFormat("pl-PL", {
             timeZoneName: "short",
+            timeZone: "Europe/Warsaw",
         });
         this.offsetTzFormatter = new Intl.DateTimeFormat(undefined, {
             timeZoneName: "shortOffset",
+            timeZone: "Europe/Warsaw",
         });
     }
 
