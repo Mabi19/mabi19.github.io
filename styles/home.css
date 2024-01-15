@@ -78,7 +78,7 @@
     align-items: flex-start;
 }
 
-@media (max-width: 650px) {
+@media (max-width: 750px) {
     .intro-container {
         flex-flow: column nowrap;
     }
