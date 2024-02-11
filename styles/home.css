@@ -4,6 +4,7 @@
     display: flex;
     flex-flow: row wrap;
     justify-content: center;
+    align-items: flex-start;
     gap: 1rem;
 }
 
@@ -68,6 +69,23 @@
             height: 1.5rem;
             object-fit: contain;
         }
+    }
+}
+
+.project-link {
+    /* reset underline position */
+    text-decoration: none;
+    span {
+        text-decoration: underline;
+    }
+
+    * {
+        vertical-align: middle;
+    }
+
+    .link-icon {
+        height: 1.25em;
+        margin-right: 0.25em;
     }
 }
 
