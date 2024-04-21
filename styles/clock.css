@@ -15,11 +15,11 @@
 
 .clock-title {
     text-align: center;
-    width: max-content;
 }
 
 .clock-time {
     font-size: 2.5em;
+    width: max-content;
 }
 
 .clock-sub {
