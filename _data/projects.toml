@@ -42,6 +42,12 @@ name = "Password Game TAS"
 url = "https://www.youtube.com/watch?v=UF0xKMagtpE"
 links = { github = "https://github.com/Mabi19/password-game-tas/" }
 
+[[youtube]]
+name = "bad_apple.otf"
+description = "An OpenType font that plays Bad Apple!! with ligatures"
+url = "https://www.youtube.com/watch?v=Oub__07I4X8"
+links = { github = "https://github.com/Mabi19/bad-apple-font" }
+
 [[misc]]
 name = "Colourblind Simulator"
 description = "A web app I made for a biology project. Polish-only"
