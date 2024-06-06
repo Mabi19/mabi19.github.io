@@ -51,11 +51,17 @@ head_extra: |
     <div class="badges">
         {{ for technology of project.technologies }}
             {{> const name = technologies[technology]?.name ?? technology }}
+            {{ if technologies[technology].url }}
+            <a href="{{ technologies[technology].url }}">
+            {{ /if }}
             {{ if technologies[technology].themed }}
                 <img src="/assets/technologies/{{ technology }}-light.svg" class="light-only" alt="{{ name }}" title="{{ name }}" />
                 <img src="/assets/technologies/{{ technology }}-dark.svg" class="dark-only" alt="{{ name }}" title="{{ name }}" />
             {{ else }}
                 <img src="/assets/technologies/{{ technology }}.svg" alt="{{ name }}" title="{{ name }}" />
+            {{ /if }}
+            {{ if technologies[technology].url }}
+            </a>
             {{ /if }}
         {{ /for }}
     </div>

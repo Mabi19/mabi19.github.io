@@ -60,8 +60,12 @@
         min-width: calc(3rem + 2px);
 
         /* If there is only 1 child, use only 1 column */
-        &:has(:only-child) {
+        &:has(> :only-child) {
             min-width: 1.5rem;
+        }
+
+        a {
+            display: contents;
         }
 
         img {

@@ -1,8 +1,8 @@
-vue = { name = "Vue" }
-nuxt = { name = "Nuxt" }
-lit = { name = "Lit", themed = true }
-lume = { name = "Lume" }
-vanilla-ts = { name = "Vanilla (TypeScript)" }
+vue = { name = "Vue", url = "https://vuejs.org/" }
+nuxt = { name = "Nuxt", url = "https://nuxt.com/" }
+lit = { name = "Lit", url = "https://lit.dev", themed = true }
+lume = { name = "Lume", url = "https://lume.land/" }
+vanilla-ts = { name = "Vanilla (TypeScript)", url = "https://typescriptlang.org" }
 java = { name = "Java" }
-wasm = { name = "WebAssembly" }
-rust = { name = "Rust", themed = true }
+wasm = { name = "WebAssembly", url = "https://webassembly.org/" }
+rust = { name = "Rust", url = "https://rust-lang.org/", themed = true }
