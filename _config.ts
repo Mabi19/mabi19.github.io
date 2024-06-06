@@ -21,7 +21,13 @@ const site = lume(
 site.use(eta());
 site.use(toml());
 site.use(postcss());
-site.use(esbuild());
+site.use(
+    esbuild({
+        options: {
+            target: "es2022",
+        },
+    })
+);
 
 if (environment == "production") {
     site.use(minifyHTML());
