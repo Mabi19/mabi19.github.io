@@ -6,13 +6,18 @@
     background-position: 50% 50%;
     background-size: cover;
 
-    display: grid;
-    place-items: center;
+    padding: 0.5rem;
+
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+
+    position: relative;
 }
 
 .hero-text {
-    margin: 1rem;
     padding: 0.5rem 1rem;
+    margin: 0.5rem;
 
     font-size: 5rem;
     font-weight: bold;
@@ -28,8 +33,36 @@
     border-radius: 0.5rem;
 }
 
+.hero-controls {
+    position: absolute;
+    bottom: 0.5rem;
+    right: 0.5rem;
+
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: right;
+}
+
+.theme-switcher-button {
+    display: grid;
+    place-items: center;
+    background-color: var(--bg-light);
+    border: none;
+
+    cursor: pointer;
+
+    width: 40px;
+    height: 40px;
+    border-radius: 12px;
+}
+
 @media (max-width: 750px) {
     .hero-text {
         font-size: 4rem;
+    }
+
+    .hero-controls {
+        position: static;
+        width: 100%;
     }
 }

@@ -2,7 +2,7 @@ function getTimezoneName(fmt: Intl.DateTimeFormat, date: Date) {
     return fmt.formatToParts(date).filter((part) => part.type == "timeZoneName")[0].value;
 }
 
-export class MyTimezoneClock extends HTMLElement {
+class MyTimezoneClock extends HTMLElement {
     titleElem: HTMLDivElement;
     timeElem: HTMLDivElement;
     subElem: HTMLDivElement;
