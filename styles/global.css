@@ -7,10 +7,6 @@
     box-sizing: border-box;
 }
 
-:root {
-    --accent-color: #9370d8;
-}
-
 body {
     font-family: "IBM Plex Sans", "Helvetica Neue", Arial, sans-serif;
     line-height: 1.5;
@@ -44,16 +40,47 @@ body {
     inherits: true;
 }
 
+@property --link {
+    syntax: "<color>";
+    initial-value: #0066cc;
+    inherits: true;
+}
+
+@property --link-visited {
+    syntax: "<color>";
+    initial-value: #653096;
+    inherits: true;
+}
+
 :root {
+    --accent-color: #9370d8;
+    --secondary-color: #097b30;
+
     --text: #333;
     --bg: white;
     --bg-light: #f0f0e8;
     --panel-bg: #fcfcfc;
+    --link: #0066cc;
+    --link-visited: #653096;
 
     transition: 0.3s ease;
-    transition-property: --text, --bg, --bg-light, --panel-bg;
+    transition-property: --text, --bg, --bg-light, --panel-bg, --link, --link-visited,
+        --accent-color, --secondary-color;
 
     color-scheme: light;
+}
+
+:root.dark-theme {
+    --secondary-color: #83daa1;
+
+    --text: whitesmoke;
+    --bg: #22222f;
+    --bg-light: #2f2f35;
+    --panel-bg: var(--bg-light);
+    --link: #7ebaf7;
+    --link-visited: #dc9fff;
+
+    color-scheme: dark;
 }
 
 @media (prefers-reduced-motion) {
@@ -62,20 +89,20 @@ body {
     }
 }
 
-:root.dark-theme {
-    --text: whitesmoke;
-    --bg: #22222f;
-    --bg-light: #2f2f35;
-    --panel-bg: var(--bg-light);
-    color-scheme: dark;
-}
-
 :root:not(.dark-theme) .dark-only {
     display: none;
 }
 
 :root.dark-theme .light-only {
     display: none;
+}
+
+a {
+    color: var(--link);
+}
+
+a:visited {
+    color: var(--link-visited);
 }
 
 main {
