@@ -1,8 +1,8 @@
-vue = "Vue"
-nuxt = "Nuxt"
-lit = "Lit"
-lume = "Lume"
-vanilla-ts = "Vanilla (TypeScript)"
-java = "Java"
-wasm = "WebAssembly"
-rust = "Rust"
+vue = { name = "Vue" }
+nuxt = { name = "Nuxt" }
+lit = { name = "Lit", themed = true }
+lume = { name = "Lume" }
+vanilla-ts = { name = "Vanilla (TypeScript)" }
+java = { name = "Java" }
+wasm = { name = "WebAssembly" }
+rust = { name = "Rust", themed = true }

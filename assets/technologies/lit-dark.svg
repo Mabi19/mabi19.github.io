@@ -1,0 +1,7 @@
+<!-- Modified to remove the text and flatten all the CSS -->
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 200">
+  <view id="flame" viewBox="0 0 160 200" />
+
+  <path fill="#fff" d="M80 160 L80 80 L120 40 L 120 120 M0 160 L40 200 L40 120 L20 120"/>
+  <path fill="#fff" d="M40 120v-80l40-40v80M120 200v-80l40-40v80M0 160v-80l40 40"/>
+</svg>
