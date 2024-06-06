@@ -16,7 +16,30 @@ body {
     line-height: 1.5;
     margin: 0;
 
-    color: #333;
+    color: var(--text);
+    background-color: var(--bg);
+}
+
+:root {
+    --text: #333;
+    --bg: white;
+    --bg-light: #fcfcfc;
+    color-scheme: light;
+}
+
+:root.dark-theme {
+    --text: whitesmoke;
+    --bg: #22222f;
+    --bg-light: #2f2f35;
+    color-scheme: dark;
+}
+
+:root:not(.dark-theme) .dark-only {
+    display: none;
+}
+
+:root.dark-theme .light-only {
+    display: none;
 }
 
 main {

@@ -1,6 +1,6 @@
 .clock {
     padding: 0.5rem;
-    background-color: #fdfdfd;
+    background-color: var(--bg-light);
 
     border-radius: 0.5rem;
     --border-width: 4px;

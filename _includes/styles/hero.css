@@ -22,6 +22,7 @@
     text-shadow: 0 0 4px black;
     box-shadow: 0 0 12px white;
     background-color: #f8f8f8;
+    color: #333;
     mix-blend-mode: screen;
 
     border-radius: 0.5rem;
