@@ -75,12 +75,12 @@
 .project-link {
     /* reset underline position */
     text-decoration: none;
+    display: flex;
+    flex-flow: row nowrap;
+    align-items: center;
+
     span {
         text-decoration: underline;
-    }
-
-    * {
-        vertical-align: middle;
     }
 
     .link-icon {

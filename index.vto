@@ -2,7 +2,9 @@
 layout: simple.vto
 link_definitions:
     github:
-        icon: /assets/icons/github-mark.svg
+        themed: true
+        icon_light: /assets/icons/github-mark-light.svg
+        icon_dark: /assets/icons/github-mark-dark.svg
         text: Source code on GitHub
 head_extra: |
     <link rel="stylesheet" href="/styles/home.css">
@@ -34,11 +36,15 @@ head_extra: |
         <div class="links">
             {{ for name, url of project.links }}
             {{> const link_data = link_definitions[name] }}
-            <a href="{{ url }}" class="project-link"
-                ><img src="{{ link_data.icon }}" role="presentation" class="link-icon" /><span>{{
-                    link_data.text
-                }}</span></a
-            >
+            <a href="{{ url }}" class="project-link">
+                {{ if link_data.themed }}
+                <img src="{{ link_data.icon_light }}" role="presentation" class="link-icon light-only" />
+                <img src="{{ link_data.icon_dark }}" role="presentation" class="link-icon dark-only" />
+                {{ else }}
+                <img src="{{ link_data.icon }}" role="presentation" class="link-icon" />
+                {{ /if }}
+                <span>{{ link_data.text }}</span>
+            </a>
             {{ /for }}
         </div>
     </div>
