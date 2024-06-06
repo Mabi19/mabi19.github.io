@@ -15,7 +15,7 @@
 
     --border-width: 4px;
     border-radius: 0.5rem;
-    background-color: var(--bg-light);
+    background-color: var(--panel-bg);
     /* rest is applied via the gradient-border class */
 
     display: flex;

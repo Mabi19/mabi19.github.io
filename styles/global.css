@@ -20,17 +20,53 @@ body {
     background-color: var(--bg);
 }
 
+@property --text {
+    syntax: "<color>";
+    initial-value: #333;
+    inherits: true;
+}
+
+@property --bg {
+    syntax: "<color>";
+    initial-value: white;
+    inherits: true;
+}
+
+@property --bg-light {
+    syntax: "<color>";
+    initial-value: #f0f0e8;
+    inherits: true;
+}
+
+@property --panel-bg {
+    syntax: "<color>";
+    initial-value: #fcfcfc;
+    inherits: true;
+}
+
 :root {
     --text: #333;
     --bg: white;
-    --bg-light: #fcfcfc;
+    --bg-light: #f0f0e8;
+    --panel-bg: #fcfcfc;
+
+    transition: 0.3s ease;
+    transition-property: --text, --bg, --bg-light, --panel-bg;
+
     color-scheme: light;
+}
+
+@media (prefers-reduced-motion) {
+    :root {
+        transition: none;
+    }
 }
 
 :root.dark-theme {
     --text: whitesmoke;
     --bg: #22222f;
     --bg-light: #2f2f35;
+    --panel-bg: var(--bg-light);
     color-scheme: dark;
 }
 
