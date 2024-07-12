@@ -17,7 +17,7 @@ switch (storageTheme) {
     default:
         storageTheme = "system";
 }
-export let selectedTheme = storageTheme as "light" | "dark" | "system";
+let selectedTheme = storageTheme as "light" | "dark" | "system";
 
 function getSystemTheme() {
     return matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
