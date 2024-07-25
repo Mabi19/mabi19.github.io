@@ -22,6 +22,12 @@ body {
     inherits: true;
 }
 
+@property --text-dim {
+    syntax: "<color>";
+    initial-value: #555;
+    inherits: true;
+}
+
 @property --bg {
     syntax: "<color>";
     initial-value: white;
@@ -57,6 +63,7 @@ body {
     --secondary-color: #097b30;
 
     --text: #333;
+    --text-dim: #555;
     --bg: white;
     --bg-light: #f0f0e8;
     --panel-bg: #fcfcfc;
@@ -64,7 +71,7 @@ body {
     --link-visited: #653096;
 
     transition: 0.3s ease;
-    transition-property: --text, --bg, --bg-light, --panel-bg, --link, --link-visited,
+    transition-property: --text, --text-dim, --bg, --bg-light, --panel-bg, --link, --link-visited,
         --accent-color, --secondary-color;
 
     color-scheme: light;
@@ -74,6 +81,7 @@ body {
     --secondary-color: #83daa1;
 
     --text: whitesmoke;
+    --text-dim: #ccc;
     --bg: #22222f;
     --bg-light: #2f2f35;
     --panel-bg: var(--bg-light);
@@ -115,6 +123,18 @@ main {
 hr {
     border: none;
     border-bottom: 4px dashed var(--accent-color);
+}
+
+hgroup {
+    margin: 1em 0;
+
+    h1 {
+        margin: 0;
+    }
+    p {
+        margin: 0;
+        color: var(--text-dim);
+    }
 }
 
 h2,
