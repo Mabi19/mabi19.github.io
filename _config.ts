@@ -32,6 +32,7 @@ site.use(
     esbuild({
         options: {
             target: "es2022",
+            format: "iife",
         },
     })
 );
