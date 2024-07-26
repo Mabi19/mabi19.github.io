@@ -2,6 +2,7 @@ import lume from "lume/mod.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import eta from "lume/plugins/eta.ts";
 import lightningCSS from "lume/plugins/lightningcss.ts";
+import metas from "lume/plugins/metas.ts";
 import minifyHTML from "lume/plugins/minify_html.ts";
 import postcss from "lume/plugins/postcss.ts";
 import readingInfo from "lume/plugins/reading_info.ts";
@@ -18,6 +19,8 @@ const site = lume(
     },
     {}
 );
+
+site.use(metas());
 
 site.use(eta());
 site.use(toml());
