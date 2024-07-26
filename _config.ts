@@ -1,4 +1,5 @@
 import lume from "lume/mod.ts";
+import codeHighlight from "lume/plugins/code_highlight.ts";
 import esbuild from "lume/plugins/esbuild.ts";
 import eta from "lume/plugins/eta.ts";
 import lightningCSS from "lume/plugins/lightningcss.ts";
@@ -42,6 +43,16 @@ if (environment == "development") {
     site.use(sourceMaps());
 }
 
+site.use(
+    codeHighlight({
+        // TODO: figure out if Highlight.js supports easy theme switching.
+        // Or just use Shiki.
+        theme: {
+            name: "atom-one-dark",
+            path: "/styles/code-hljs.css",
+        },
+    })
+);
 site.use(readingInfo());
 
 site.copy("assets");
