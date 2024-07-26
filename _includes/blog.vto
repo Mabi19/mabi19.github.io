@@ -12,7 +12,7 @@ head_extra:
 
 {{ content }}
 
-<!-- Previous post = back in time -->
+{{# Previous post = back in time #}}
 {{ set prev = search.previousPage(url, "post !blog-nav") }}
 {{ set next = search.nextPage(url, "post !blog-nav") }}
 
