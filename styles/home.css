@@ -1,5 +1,9 @@
 @import "styles/gradient-border.css";
 
+main {
+    --column-width: 72rem;
+}
+
 .panel-box {
     display: flex;
     flex-flow: row wrap;
