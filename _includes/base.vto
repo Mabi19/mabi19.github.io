@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="/styles/global.css">
         <link rel="icon" href="/assets/icon.png">
         <script src="/scripts/themes.js"></script>
-        {{ it.head_extra }}
+        {{ it.head_extra.join("") }}
     </head>
     <body>
         {{ content }}
