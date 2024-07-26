@@ -54,6 +54,10 @@
     width: 40px;
     height: 40px;
     border-radius: 12px;
+
+    &:hover {
+        background-color: var(--bg-dim);
+    }
 }
 
 @media (max-width: 750px) {

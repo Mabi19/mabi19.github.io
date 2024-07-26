@@ -15,7 +15,7 @@
 
     --border-width: 4px;
     border-radius: 0.5rem;
-    background-color: var(--panel-bg);
+    background-color: var(--bg-light);
     /* rest is applied via the gradient-border class */
 
     display: flex;
@@ -73,6 +73,12 @@
             height: 1.5rem;
             object-fit: contain;
         }
+    }
+
+    .links {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5rem;
     }
 }
 
