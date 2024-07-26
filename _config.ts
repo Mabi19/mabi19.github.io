@@ -42,5 +42,6 @@ if (environment == "development") {
 site.use(readingInfo());
 
 site.copy("assets");
+site.copyRemainingFiles();
 
 export default site;
