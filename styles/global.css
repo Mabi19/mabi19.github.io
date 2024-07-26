@@ -1,6 +1,7 @@
 @import "styles/hero.css";
 @import "styles/navbar.css";
 @import "styles/font.css";
+@import "styles/inputs.css";
 
 *,
 *::after,
@@ -62,6 +63,7 @@ body {
 :root {
     --accent-color: #9370d8;
     --secondary-color: #097b30;
+    accent-color: var(--accent-color);
 
     --text: #333;
     --text-dim: #555;

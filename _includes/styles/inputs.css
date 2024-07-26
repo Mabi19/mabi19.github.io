@@ -1,0 +1,12 @@
+input {
+    border: 2px solid var(--bg-dim);
+    border-radius: 0.5rem;
+    font: inherit;
+    background-color: var(--bg-light);
+
+    padding: 0.25rem 0.5rem;
+
+    &:focus {
+        outline: 2px solid var(--accent-color);
+    }
+}
