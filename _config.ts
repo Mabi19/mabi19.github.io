@@ -26,6 +26,8 @@ site.use(metas());
 site.use(eta());
 site.use(toml());
 site.use(postcss());
+// I'm not going to be View Source'ing, the Inspector works just as well with this thing on
+site.use(minifyHTML());
 site.use(
     esbuild({
         options: {
@@ -35,7 +37,6 @@ site.use(
 );
 
 if (environment == "production") {
-    site.use(minifyHTML());
     site.use(lightningCSS());
 }
 
