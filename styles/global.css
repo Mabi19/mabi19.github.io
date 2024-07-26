@@ -114,11 +114,15 @@ a:visited {
     color: var(--link-visited);
 }
 
+a:hover {
+    opacity: 0.9;
+}
+
 main {
     padding: 0.5rem;
     margin: auto;
     width: 100%;
-    max-width: 80rem;
+    max-width: 72rem;
 }
 
 hr {

@@ -1,11 +1,12 @@
 import lume from "lume/mod.ts";
-import eta from "lume/plugins/eta.ts";
-import toml from "lume/plugins/toml.ts";
-import postcss from "lume/plugins/postcss.ts";
-import minifyHTML from "lume/plugins/minify_html.ts";
-import lightningCSS from "lume/plugins/lightningcss.ts";
-import sourceMaps from "lume/plugins/source_maps.ts";
 import esbuild from "lume/plugins/esbuild.ts";
+import eta from "lume/plugins/eta.ts";
+import lightningCSS from "lume/plugins/lightningcss.ts";
+import minifyHTML from "lume/plugins/minify_html.ts";
+import postcss from "lume/plugins/postcss.ts";
+import readingInfo from "lume/plugins/reading_info.ts";
+import sourceMaps from "lume/plugins/source_maps.ts";
+import toml from "lume/plugins/toml.ts";
 
 // this is set in deno.json
 const environment = Deno.env.get("DENO_ENV") == "production" ? "production" : "development";
@@ -37,6 +38,8 @@ if (environment == "production") {
 if (environment == "development") {
     site.use(sourceMaps());
 }
+
+site.use(readingInfo());
 
 site.copy("assets");
 

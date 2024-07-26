@@ -1,0 +1,31 @@
+---
+layout: simple.vto
+head_extra: |
+    <link rel="stylesheet" href="/styles/blog.css">
+---
+
+<hgroup>
+    <h1>{{ title }}</h1>
+    <p>{{ date.toISOString().split("T")[0] }} &bull; {{ readingInfo.minutes }} min read</p>
+</hgroup>
+
+{{ content }}
+
+<!-- Previous post = back in time -->
+{{ set prev = search.previousPage(url, "post !blog-nav") }}
+{{ set next = search.nextPage(url, "post !blog-nav") }}
+
+{{ if prev || next }}
+<nav class="page-nav">
+    {{ if prev }}
+    <a href="{{ prev.url }}">&laquo; {{ prev.title }}</a>
+    {{ else }}
+        <span></span>
+    {{ /if }}
+    {{ if next }}
+    <a href="{{ next.url }}">{{ next.title }} &raquo;</a>
+    {{ else }}
+        <span></span>
+    {{ /if }}
+</nav>
+{{ /if }}

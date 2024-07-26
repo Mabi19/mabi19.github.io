@@ -24,6 +24,8 @@
         font-weight: bold;
 
         &:hover {
+            /* override for default link highlight */
+            opacity: 1;
             background-color: var(--bg-dim);
         }
     }

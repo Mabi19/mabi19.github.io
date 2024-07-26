@@ -1,0 +1,9 @@
+---
+date: 2024-07-26
+layout: blog.vto
+title: I have a blog now
+description: The first post. Hopefully there'll be more in the future :D
+---
+
+Not sure what I'll use it for, though. Probably explaining my projects.
+Or just putting opinions on the internet ¯\\\_(ツ)\_/¯
