@@ -7,7 +7,7 @@ const postList = (posts: PageData[]) => html`
     <ol class="post-list">
         ${posts.map(
             (post) => html`<li>
-                <div>
+                <div class="heading">
                     <a href="${post.url}" class="title">${post.title}</a>
                     <span class="date">(${post.date.toISOString().split("T")[0]})</span>
                 </div>

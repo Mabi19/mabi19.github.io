@@ -6,6 +6,13 @@
         flex-flow: column nowrap;
     }
 
+    .heading {
+        display: flex;
+        flex-flow: row wrap;
+        gap: 0.5rem;
+        align-items: baseline;
+    }
+
     .title {
         font-size: 1.25rem;
         color: var(--text);
