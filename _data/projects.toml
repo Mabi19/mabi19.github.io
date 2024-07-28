@@ -1,4 +1,10 @@
 [[pinned]]
+name = "Tic-tac-toe Font"
+description = "The newest innovation in font technology: Playable tic-tac-toe with OpenType ligatures"
+url = "/blog/tic-tac-toe-font/"
+links = { github = "https://github.com/Mabi19/tic-tac-toe-font" }
+
+[[pinned]]
 name = "How Computers Use Numbers"
 description = 'My <a href="https://some.3b1b.co">SoME3</a> submission: an interactive article about various number formats'
 url = "/numbers/"
