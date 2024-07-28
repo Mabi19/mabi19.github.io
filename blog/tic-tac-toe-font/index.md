@@ -8,13 +8,12 @@ mergedKeys:
 head_extra:
     - <script src="./demo.js" defer></script>
     - <link rel="stylesheet" href="./demo.css">
-draft: true
 ---
 
 After making the [Bad Apple Font](https://www.youtube.com/watch?v=Oub__07I4X8), I wanted to go bigger.
 6549 ligatures is not nearly enough. I was also dissatisfied with the compatibility, as that font only worked with some renderers.
 
-This font is interactive, allowing you to play tic-tac-toe in **any text editor** that supports ligatures.
+My newest creation uses OpenType as a game engine. This font is interactive, allowing you to play tic-tac-toe in **any text editor** that supports ligatures.
 It contains a total of ***594,936*** ligatures (90x as many as Bad Apple!), though not as many unique characters (5478 instead of 6562).
 
 ## How it works
