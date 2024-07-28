@@ -1,0 +1,21 @@
+@font-face {
+    font-family: TicTacToe;
+    src: url("./tic-tac-toe.woff2");
+    font-weight: 400;
+}
+
+.font-demo {
+    * {
+        display: block;
+    }
+
+    input {
+        width: 100%;
+    }
+}
+
+#in-special-font {
+    font-family: TicTacToe, "IBM Plex Sans";
+
+    font-size: 96px;
+}

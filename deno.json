@@ -2,7 +2,7 @@
     "tasks": {
         "lume": "echo \"import 'lume/cli.ts'\" | deno run -A -",
         "build": "DENO_ENV=production deno task lume",
-        "serve": "deno task lume -s"
+        "serve": "LUME_DRAFTS=1 deno task lume -s"
     },
     "imports": {
         "lume/": "https://deno.land/x/lume@v2.2.4/"
