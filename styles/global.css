@@ -124,7 +124,7 @@ main {
     padding: 0.5rem;
     margin: auto;
     width: 100%;
-    max-width: var(--column-width, 60rem);
+    max-width: var(--column-width, 50rem);
 }
 
 hr {
