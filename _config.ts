@@ -10,6 +10,9 @@ import readingInfo from "lume/plugins/reading_info.ts";
 import sourceMaps from "lume/plugins/source_maps.ts";
 import toml from "lume/plugins/toml.ts";
 
+import mdAnchor from "npm:markdown-it-anchor@9.0.1";
+import mdFootnote from "npm:markdown-it-footnote@4.0.0";
+
 // this is set in deno.json
 const environment = Deno.env.get("DENO_ENV") == "production" ? "production" : "development";
 console.log(`environment: ${environment}`);
@@ -18,7 +21,17 @@ const site = lume(
     {
         location: new URL("https://mabi.land"),
     },
-    {}
+    {
+        markdown: {
+            options: {
+                typographer: true,
+            },
+            plugins: [
+                [mdAnchor, { level: 2, permalink: mdAnchor.permalink.headerLink() }],
+                mdFootnote,
+            ],
+        },
+    }
 );
 
 site.use(metas());

@@ -120,6 +120,21 @@ a:hover {
     opacity: 0.9;
 }
 
+/* Include the anchor tag to increase specificity */
+a.header-anchor {
+    text-decoration: none;
+    color: inherit;
+
+    &:hover {
+        text-decoration: underline;
+    }
+
+    &:hover::after {
+        content: "🔗";
+        font-size: smaller;
+    }
+}
+
 main {
     padding: 0.5rem;
     margin: auto;

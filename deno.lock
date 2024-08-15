@@ -74,9 +74,11 @@
       "npm:lightningcss-wasm@1.22.1": "npm:lightningcss-wasm@1.22.1",
       "npm:lightningcss-wasm@1.24.1": "npm:lightningcss-wasm@1.24.1",
       "npm:lightningcss-wasm@1.25.1": "npm:lightningcss-wasm@1.25.1",
+      "npm:markdown-it-anchor@9.0.1": "npm:markdown-it-anchor@9.0.1_@types+markdown-it@14.1.2_markdown-it@13.0.2",
       "npm:markdown-it-attrs@4.1.6": "npm:markdown-it-attrs@4.1.6_markdown-it@13.0.2",
       "npm:markdown-it-deflist@2.1.0": "npm:markdown-it-deflist@2.1.0",
       "npm:markdown-it-deflist@3.0.0": "npm:markdown-it-deflist@3.0.0",
+      "npm:markdown-it-footnote@4.0.0": "npm:markdown-it-footnote@4.0.0",
       "npm:markdown-it@13.0.2": "npm:markdown-it@13.0.2",
       "npm:markdown-it@14.0.0": "npm:markdown-it@14.0.0",
       "npm:markdown-it@14.1.0": "npm:markdown-it@14.1.0",
@@ -325,6 +327,21 @@
         "integrity": "sha512-/kYRxGDLWzHOB7q+wtSUQlFrtcdUccpfy+X+9iMBpHK8QLLhx2wIPYuS5DYtR9Wa/YlZAbIovy7qVdB1Aq6Lyw==",
         "dependencies": {}
       },
+      "@types/linkify-it@5.0.0": {
+        "integrity": "sha512-sVDA58zAw4eWAffKOaQH5/5j3XeayukzDk+ewSsnv3p4yJEZHCCzMDiZM8e0OUrRvmpGZ85jf4yDHkHsgBNr9Q==",
+        "dependencies": {}
+      },
+      "@types/markdown-it@14.1.2": {
+        "integrity": "sha512-promo4eFwuiW+TfGxhi+0x3czqTYJkG8qB17ZUJiVF10Xm7NLVRSLUsfRTU/6h1e24VvRnXCx+hG7li58lkzog==",
+        "dependencies": {
+          "@types/linkify-it": "@types/linkify-it@5.0.0",
+          "@types/mdurl": "@types/mdurl@2.0.0"
+        }
+      },
+      "@types/mdurl@2.0.0": {
+        "integrity": "sha512-RGdgjQUZba5p6QEFAVx2OGb8rQDL/cPRG7GiedRzMcJ1tYnUANBncjbSB1NRGwbvjcPeikRABz2nshyPk1bhWg==",
+        "dependencies": {}
+      },
       "@types/node@18.16.19": {
         "integrity": "sha512-IXl7o+R9iti9eBW4Wg2hx1xQDig183jj7YLn8F7udNceyfkbn1ZxmzZXuak20gR40D7pIkIY1kYGx5VIGbaHKA==",
         "dependencies": {}
@@ -531,6 +548,13 @@
           "js-tokens": "js-tokens@4.0.0"
         }
       },
+      "markdown-it-anchor@9.0.1_@types+markdown-it@14.1.2_markdown-it@13.0.2": {
+        "integrity": "sha512-cBt7aAzmkfX8X7FqAe8EBryiKmToXgMQEEMqkXzWCm0toDtfDYIGboKeTKd8cpNJArJtutrf+977wFJTsvNGmQ==",
+        "dependencies": {
+          "@types/markdown-it": "@types/markdown-it@14.1.2",
+          "markdown-it": "markdown-it@13.0.2"
+        }
+      },
       "markdown-it-attrs@4.1.6_markdown-it@13.0.2": {
         "integrity": "sha512-O7PDKZlN8RFMyDX13JnctQompwrrILuz2y43pW2GagcwpIIElkAdfeek+erHfxUOlXWPsjFeWmZ8ch1xtRLWpA==",
         "dependencies": {
@@ -543,6 +567,10 @@
       },
       "markdown-it-deflist@3.0.0": {
         "integrity": "sha512-OxPmQ/keJZwbubjiQWOvKLHwpV2wZ5I3Smc81OjhwbfJsjdRrvD5aLTQxmZzzePeO0kbGzAo3Krk4QLgA8PWLg==",
+        "dependencies": {}
+      },
+      "markdown-it-footnote@4.0.0": {
+        "integrity": "sha512-WYJ7urf+khJYl3DqofQpYfEYkZKbmXmwxQV8c8mO/hGIhgZ1wOe7R4HLFNwqx7TjILbnC98fuyeSsin19JdFcQ==",
         "dependencies": {}
       },
       "markdown-it@13.0.2": {
