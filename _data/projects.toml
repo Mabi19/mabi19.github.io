@@ -1,4 +1,10 @@
 [[pinned]]
+name = "Static HTMX Connect 4"
+description = "Using hypermedia in the exact opposite way that it's meant to be used"
+url = "/static-htmx-connect-4/"
+links = { github = "https://github.com/Mabi19/static-htmx-connect-4" }
+
+[[pinned]]
 name = "Tic-tac-toe Font"
 description = "The newest innovation in font technology: Playable tic-tac-toe with OpenType ligatures"
 url = "/blog/tic-tac-toe-font/"
