@@ -3,7 +3,6 @@ date: 2024-08-16
 layout: blog.vto
 title: How I made Connect 4 with HTMX on a static host
 description: "Also including 120 kB of CSS!"
-draft: true
 ---
 
 After I [put tic-tac-toe in a font](/blog/tic-tac-toe-font/), I wanted to go bigger.
