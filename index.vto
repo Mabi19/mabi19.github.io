@@ -88,6 +88,19 @@ head_extra:
 </section>
 
 <section>
+    <h2>Wayland Adventures</h2>
+    <p>
+        Since switching to Linux, I've been steadily customizing my <a href="https://wayland.freedesktop.org">Wayland</a>-based desktop.
+        I've ended up making some apps and utilities for it in the meantime.
+    </p>
+    <div class="panel-box" style="--border-col-1: #ffcd00; --border-col-2: goldenrod">
+        {{ for project of projects.wayland }}
+        {{ project_panel(project) }}
+        {{ /for }}
+    </div>
+</section>
+
+<section>
     <h2>Hypixel SkyBlock</h2>
     <p>
         I don't play SkyBlock very much at the moment, but I did make some tools for it (though I

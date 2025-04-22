@@ -1,10 +1,4 @@
 [[pinned]]
-name = "Static HTMX Connect 4"
-description = "Using hypermedia in the exact opposite way that it's meant to be used"
-url = "/static-htmx-connect-4/"
-links = { github = "https://github.com/Mabi19/static-htmx-connect-4" }
-
-[[pinned]]
 name = "Tic-tac-toe Font"
 description = "The newest innovation in font technology: Playable tic-tac-toe with OpenType ligatures"
 url = "/blog/tic-tac-toe-font/"
@@ -27,11 +21,31 @@ technologies = ["vue", "nuxt"]
 links = { github = "https://github.com/Mabi19/stardew-perfection-randomizer/" }
 
 [[pinned]]
+name = "Stream Bookmarks"
+description = "A bookmark command for ArgonMatrix's YouTube live streams, to return where you left off"
+url = "https://bookmarks.mabi.land"
+technologies = ["deno", "typescript"]
+links = { github = "https://github.com/Mabi19/stream-bookmarks" }
+
+[[pinned]]
 name = "This website"
 description = "First time using a static site generator. Still a work in progress 🚧"
 icon = "/assets/icon.png"
 technologies = ["lume"]
 links = { github = "https://github.com/Mabi19/mabi19.github.io/" }
+
+[[wayland]]
+name = "Desktop Shell"
+description = "Desktop widgets I use on my Linux desktop"
+technologies = ["astal", "typescript"]
+links = { github = "https://github.com/Mabi19/desktop-shell" }
+
+# TODO: uncomment at 1.0
+# [[wayland]]
+# name = "Spaceshot"
+# description = "A batteries-included screenshot tool for wlroots-compatible compositors"
+# technologies = ["c", "vala", "wayland"]
+# links = { github = "https://github.com/Mabi19/spaceshot" }
 
 [[skyblock]]
 name = "Luckalyzer"
@@ -46,7 +60,7 @@ name = "Spider's Den Forecast"
 description = "A weather forecast for the Spider's Den island in Hypixel SkyBlock"
 url = "/sb-forecast/"
 icon = "/sb-forecast/favicon-default.png"
-technologies = ["vanilla-ts"]
+technologies = ["typescript"]
 links = { github = "https://github.com/Mabi19/sb-forecast/" }
 
 [[youtube]]
@@ -59,6 +73,12 @@ name = "bad_apple.otf"
 description = "An OpenType font that plays Bad Apple!! with ligatures"
 url = "https://www.youtube.com/watch?v=Oub__07I4X8"
 links = { github = "https://github.com/Mabi19/bad-apple-font" }
+
+[[misc]]
+name = "Static HTMX Connect 4"
+description = "Using hypermedia in the exact opposite way that it's meant to be used"
+url = "/static-htmx-connect-4/"
+links = { github = "https://github.com/Mabi19/static-htmx-connect-4" }
 
 [[misc]]
 name = "Colourblind Simulator"

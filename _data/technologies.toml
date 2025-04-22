@@ -2,7 +2,11 @@ vue = { name = "Vue", url = "https://vuejs.org/" }
 nuxt = { name = "Nuxt", url = "https://nuxt.com/" }
 lit = { name = "Lit", url = "https://lit.dev", themed = true }
 lume = { name = "Lume", url = "https://lume.land/" }
-vanilla-ts = { name = "Vanilla (TypeScript)", url = "https://typescriptlang.org" }
+typescript = { name = "TypeScript", url = "https://typescriptlang.org" }
 java = { name = "Java" }
 wasm = { name = "WebAssembly", url = "https://webassembly.org/" }
 rust = { name = "Rust", url = "https://rust-lang.org/", themed = true }
+astal = { name = "Astal", url = "https://aylur.github.io/astal/" }
+c = { name = "C" }
+vala = { name = "Vala", url = "https://vala.dev" }
+deno = { name = "Deno", url = "https://deno.com" }
