@@ -29,10 +29,16 @@ links = { github = "https://github.com/Mabi19/stream-bookmarks" }
 
 [[pinned]]
 name = "This website"
-description = "First time using a static site generator. Still a work in progress 🚧"
+description = "First time using a static site generator."
 icon = "/assets/icon.png"
 technologies = ["lume"]
 links = { github = "https://github.com/Mabi19/mabi19.github.io/" }
+
+[[wayland]]
+name = "Spaceshot"
+description = "A batteries-included screenshot tool for wlroots-compatible compositors"
+technologies = ["c", "vala", "wayland"]
+links = { github = "https://github.com/Mabi19/spaceshot" }
 
 [[wayland]]
 name = "Desktop Shell"
@@ -40,16 +46,9 @@ description = "Desktop widgets I use on my Linux desktop"
 technologies = ["astal", "typescript"]
 links = { github = "https://github.com/Mabi19/desktop-shell" }
 
-# TODO: uncomment at 1.0
-# [[wayland]]
-# name = "Spaceshot"
-# description = "A batteries-included screenshot tool for wlroots-compatible compositors"
-# technologies = ["c", "vala", "wayland"]
-# links = { github = "https://github.com/Mabi19/spaceshot" }
-
 [[skyblock]]
 name = "Luckalyzer"
-description = "A luck calculator for Hypixel SkyBlock"
+description = "A luck calculator for Hypixel SkyBlock. Now horrifically out of date!"
 url = "/luckalyzer/"
 icon = "/luckalyzer/icon-8x.png"
 technologies = ["vue", "wasm", "rust"]
@@ -57,7 +56,7 @@ links = { github = "https://github.com/Mabi19/luckalyzer/" }
 
 [[skyblock]]
 name = "Spider's Den Forecast"
-description = "A weather forecast for the Spider's Den island in Hypixel SkyBlock"
+description = "A weather forecast for the Spider's Den island in Hypixel SkyBlock. Somehow still works"
 url = "/sb-forecast/"
 icon = "/sb-forecast/favicon-default.png"
 technologies = ["typescript"]

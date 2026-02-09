@@ -10,3 +10,4 @@ astal = { name = "Astal", url = "https://aylur.github.io/astal/" }
 c = { name = "C" }
 vala = { name = "Vala", url = "https://vala.dev" }
 deno = { name = "Deno", url = "https://deno.com" }
+wayland = { name = "Wayland", url = "https://wayland.freedesktop.org" }
