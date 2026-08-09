@@ -13,6 +13,10 @@ import toml from "lume/plugins/toml.ts";
 import mdAnchor from "npm:markdown-it-anchor@9.0.1";
 import mdFootnote from "npm:markdown-it-footnote@4.0.0";
 
+import lang_c from "highlightjs/lib/languages/c";
+import lang_plaintext from "highlightjs/lib/languages/plaintext";
+import lang_mcfunction from "./_highlightjs/mcfunction.js";
+
 // this is set in deno.json
 const environment = Deno.env.get("DENO_ENV") == "production" ? "production" : "development";
 console.log(`environment: ${environment}`);
@@ -65,6 +69,11 @@ site.use(
         theme: {
             name: "atom-one-dark",
             cssFile: "/styles/code-hljs.css",
+        },
+        languages: {
+            c: lang_c,
+            plaintext: lang_plaintext,
+            mcfunction: lang_mcfunction,
         },
     }),
 );
