@@ -74,8 +74,9 @@ body {
     --link-visited: #653096;
 
     transition: 0.3s ease;
-    transition-property: --text, --text-dim, --bg, --bg-dim, --bg-light, --link, --link-visited,
-        --accent-color, --secondary-color;
+    transition-property:
+        --text, --text-dim, --bg, --bg-dim, --bg-light, --link, --link-visited, --accent-color,
+        --secondary-color;
 
     color-scheme: light;
 }
@@ -85,8 +86,8 @@ body {
 
     --text: whitesmoke;
     --text-dim: #ccc;
-    --bg: #22222f;
-    --bg-light: #292934;
+    --bg: #1f202d;
+    --bg-light: #2a2c39;
     --bg-dim: #35353d;
     --link: #7ebaf7;
     --link-visited: #dc9fff;
