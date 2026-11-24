@@ -1,24 +1,24 @@
-import lume from "lume/mod.ts";
-import codeHighlight from "lume/plugins/code_highlight.ts";
-import esbuild from "lume/plugins/esbuild.ts";
-import eta from "lume/plugins/eta.ts";
-import lightningCSS from "lume/plugins/lightningcss.ts";
-import metas from "lume/plugins/metas.ts";
-import minifyHTML from "lume/plugins/minify_html.ts";
-import postcss from "lume/plugins/postcss.ts";
-import readingInfo from "lume/plugins/reading_info.ts";
-import sourceMaps from "lume/plugins/source_maps.ts";
-import toml from "lume/plugins/toml.ts";
+import lume from "@lumeland/lume";
+import codeHighlight from "@lumeland/plugin-code-highlight";
+import esbuild from "@lumeland/plugin-esbuild";
+import eta from "@lumeland/plugin-eta";
+import lightningCSS from "@lumeland/plugin-lightningcss";
+import metas from "@lumeland/plugin-metas";
+import minifyHTML from "@lumeland/plugin-minify-html";
+import postcss from "@lumeland/plugin-postcss";
+import readingInfo from "@lumeland/plugin-reading-info";
+import sourceMaps from "@lumeland/plugin-source-maps";
+import toml from "@lumeland/plugin-toml";
 
-import mdAnchor from "npm:markdown-it-anchor@9.0.1";
-import mdFootnote from "npm:markdown-it-footnote@4.0.0";
+import mdAnchor from "markdown-it-anchor";
+import mdFootnote from "markdown-it-footnote";
 
-import lang_c from "highlightjs/lib/languages/c";
-import lang_plaintext from "highlightjs/lib/languages/plaintext";
+import lang_c from "highlight.js/lib/languages/c";
+import lang_plaintext from "highlight.js/lib/languages/plaintext";
 import lang_mcfunction from "./_highlightjs/mcfunction.js";
 
-// this is set in deno.json
-const environment = Deno.env.get("DENO_ENV") == "production" ? "production" : "development";
+// this is set in package.json
+const environment = process.env.NODE_ENV == "production" ? "production" : "development";
 console.log(`environment: ${environment}`);
 
 const site = lume(

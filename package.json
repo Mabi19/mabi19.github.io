@@ -1,0 +1,36 @@
+{
+  "name": "mabi.land",
+  "private": true,
+  "type": "module",
+  "allowScripts": {
+    "esbuild": false,
+    "fsevents": false,
+    "@parcel/watcher": false
+  },
+  "scripts": {
+    "build": "NODE_ENV=production lume build",
+    "serve": "lume build -s"
+  },
+  "dependencies": {
+    "@lumeland/core": "^1.0.5",
+    "@lumeland/lume": "^4.0.3",
+    "@lumeland/plugin-code-highlight": "^1.0.0",
+    "@lumeland/plugin-esbuild": "^1.0.0",
+    "@lumeland/plugin-eta": "^1.0.0",
+    "@lumeland/plugin-lightningcss": "^1.0.0",
+    "@lumeland/plugin-metas": "^1.0.0",
+    "@lumeland/plugin-minify-html": "^1.0.0",
+    "@lumeland/plugin-postcss": "^1.0.0",
+    "@lumeland/plugin-reading-info": "^1.0.0",
+    "@lumeland/plugin-source-maps": "^1.0.0",
+    "@lumeland/plugin-toml": "^1.0.0",
+    "@lumeland/ssx": "^0.1.16",
+    "highlight.js": "^11.11.1",
+    "markdown-it-anchor": "9.0.1",
+    "markdown-it-footnote": "4.0.0"
+  },
+  "devDependencies": {
+    "@types/markdown-it-footnote": "^3.0.4",
+    "@types/node": "^26.6.6"
+  }
+}

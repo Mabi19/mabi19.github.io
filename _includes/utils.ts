@@ -12,6 +12,6 @@ export const html = (str: TemplateStringsArray, ...vals: unknown[]): string =>
         })
     );
 
-import type { Data as RawPageData } from "lume/core/file.ts";
+import type { Data as RawPageData } from "@lumeland/core/types.ts";
 
 export type PageData = RawPageData & { description?: string };
